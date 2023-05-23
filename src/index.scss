@@ -1,0 +1,88 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.dark-theme{
+    --primary:#000000;
+    --inputs: rgba(217, 217, 217, 0.12);
+    --inp-color: rgba(255, 255, 255, 0.4);
+    --third-color:#FFC34A;
+ 
+}
+input,select{
+    background: rgb(23, 22, 22);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    color: var(--inp-color);
+    cursor: pointer;
+}
+input:focus,select:focus{
+    outline: none;
+}
+.Main {
+  display: flex;
+  background: var(--primary);
+  color: white;
+}
+.TopBar {
+  background: var(--primary);
+  height: 90px;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.28);;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  select,input {
+    padding: 8px 55px 8px 10px;
+    margin: 0 20px;
+  }
+  div{
+    display: flex;
+  }
+}
+.SideBar {
+  background: var(--primary);
+  border-right: 1px solid rgba(255, 255, 255, 0.28);;
+  width: 30%;
+  height: 100vh;
+  select,input {
+    padding: 8px 55px 8px 10px;
+    margin: 10px 20px;
+  }
+  input[type="color"]{
+    padding: 0;
+    outline: none;
+    border: none;
+  }
+  .submit-btn{
+    background:var(--third-color) ;
+    color: #000000 ;
+    padding: 10px 30px;
+  }
+}
+.Rightbar {
+  width: 100%;
+}
+.Display {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55%;
+  border :1px solid red;
+  padding: 30px;
+}
+
+.output{
+  background: white;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  color: black;
+}
