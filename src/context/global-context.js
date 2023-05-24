@@ -15,7 +15,10 @@ export function GlobalProvider({children}){
         logo:'text'
     });
 
-    const [codeObj,setcodeObj]=useState('');
+    const [codeObj,setcodeObj]=useState({
+        html:``,
+        code:``
+    });
     return(
         <GlobalContext.Provider value={{element,setElement,property,setProperty,spProperty,setspProperty,codeObj,setcodeObj}}>{children}</GlobalContext.Provider>
     )

@@ -1,10 +1,10 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import GlobalContext from '../../context/global-context';
-import buildHTML from '../build';
+
 
 const Form = () => {
 
-    const {element,property,setProperty,setspProperty,spProperty,setcodeObj,codeObj} = useContext(GlobalContext)
+    const {element,property,setProperty,setspProperty,spProperty} = useContext(GlobalContext)
     const {height,width,color,background} = property;
     const {alignment}=spProperty;
     const handleInput = (e)=>{
@@ -23,9 +23,7 @@ const Form = () => {
     const submitHandleGeneral=(e)=>{
        e.preventDefault();
     }
-    useEffect(()=>{
-        buildHTML(setcodeObj,property,element,codeObj);
-    },[property]);
+  
     const SpclForm = ()=>{
         if(element==='nav'){
             return(

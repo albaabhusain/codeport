@@ -1,7 +1,11 @@
-function buildHTML (setcodeObj,property,element,codeObj){
+//import GlobalContext from '../../context/global-context';
+//import { useContext} from 'react';
+function buildHTML (element,setcodeObj,codeObj){
+   // const {element,setcodeObj,codeObj} = useContext(GlobalContext)
+  // const {html,code}=codeObj 
     let htm='';
     if (element==="nav") {
-       htm= ( <nav>
+       htm= (<nav>
                 <a href="htt" class="logo"><img src="images/logo.png" alt="" srcset=""/>
                     <p>Rajvardhan</p>
                 </a>
@@ -20,11 +24,12 @@ function buildHTML (setcodeObj,property,element,codeObj){
                     <div class="line l-3"></div>
                 </div>
             </nav> );
-            setcodeObj({...codeObj, [codeObj.html]:htm});
+            setcodeObj({...codeObj, html:htm});
+
            
     }
     else{
-        setcodeObj({...property.width}) 
+        //setcodeObj({...property.width}) 
     }
     
 }
