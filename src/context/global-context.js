@@ -17,10 +17,16 @@ export function GlobalProvider({children}){
 
     const [codeObj,setcodeObj]=useState({
         html:``,
-        code:``
+        CSS:``,
+        JS:``
+    });
+    const [outObj,setoutObj]=useState({
+        html:``,
+        CSS:``,
+        JS:``
     });
     return(
-        <GlobalContext.Provider value={{element,setElement,property,setProperty,spProperty,setspProperty,codeObj,setcodeObj}}>{children}</GlobalContext.Provider>
+        <GlobalContext.Provider value={{element,setElement,property,setProperty,spProperty,setspProperty,codeObj,setcodeObj,outObj,setoutObj}}>{children}</GlobalContext.Provider>
     )
 
 }

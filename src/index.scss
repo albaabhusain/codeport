@@ -28,6 +28,7 @@ input:focus,select:focus{
   display: flex;
   background: var(--primary);
   color: white;
+  overflow: hidden;
 }
 .TopBar {
   background: var(--primary);
@@ -85,4 +86,18 @@ input:focus,select:focus{
   width: 100%;
   overflow: auto;
   color: black;
+}
+
+.CodePut{
+  div.wrap{
+    margin: 10px 30px;
+  }
+  .xcodeFrame{
+    background: gray;
+    width: 30%;
+    border: 1px solid red;
+    height: 30vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
 }

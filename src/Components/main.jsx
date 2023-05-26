@@ -3,6 +3,7 @@ import TopBar from './topBar';
 import SideBar from './sideBar';
 import { GlobalProvider } from '../context/global-context';
 import Display from './display';
+import CodePut from './codePut';
 
 const Main = () => {
     return (
@@ -14,7 +15,9 @@ const Main = () => {
                     <div className='Rightbar'>
                     <TopBar/>
                     <Display/>
+                    <CodePut/>
                     </div>
+                    
                    
                 
             </GlobalProvider>

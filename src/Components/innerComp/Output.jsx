@@ -2,17 +2,19 @@ import React, { useContext,useEffect } from 'react';
 import GlobalContext from '../../context/global-context';
 import buildHTML from '../build';
 const Output = () => {
-    const{property,codeObj,element,setcodeObj}= useContext(GlobalContext);
+    const{property,codeObj,element,setcodeObj,outObj,setoutObj}= useContext(GlobalContext);
     const {height,width,color,background} = property;
     useEffect(()=>{
-        buildHTML(element,setcodeObj,codeObj);
-    },[property]);
+        buildHTML(element,setcodeObj,codeObj,outObj,setoutObj);
+       
+    },[property,element]);
+  
     console.log(codeObj) 
     return (
         <>
         <style>
             {
-                ` /* nav bar */
+                `
                 :root {
                     --bg-color:`+background+`;
                     --light-blue: #16D1AF;
@@ -20,9 +22,6 @@ const Output = () => {
                     --grey: rgba(255, 255, 255, 0.1)
                 }
                
-                
-                
-                
                 nav a{
                     color:`+color+`;
                     text-decoration:none;
