@@ -1,0 +1,39 @@
+.CodePut{
+    
+    div.wrap{
+      margin: 0px 20px;
+      display: flex;
+      gap: 18px;
+      height: 100%;
+    }
+    .wrap{
+        >div{
+            width: 33%;
+            position: relative;
+            >span{
+                position: absolute;
+                top: 2px;
+                z-index: 10;
+                left:14px;
+                color:var(--third-color)
+            }
+        }
+    }
+    .xcodeFrame{
+      background: rgb(34, 34, 34);
+      width: 100%;
+      // border: 1px solid red;
+      border-radius: 5px;
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+    .lctLce{
+        font-size: 0.7rem;
+    }
+  }
+  .CodePut{
+    height: 25%;
+    width: 100%;
+    padding: 0 20px 0 0;
+  }
