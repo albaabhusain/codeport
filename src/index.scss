@@ -14,7 +14,7 @@
     --third-color:#FFC34A;
  
 }
-input,select{
+input,select,.colordiv{
     background: rgb(23, 22, 22);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 5px;
@@ -36,20 +36,7 @@ input:focus,select:focus{
   border-right: 1px solid rgba(255, 255, 255, 0.28);;
   width: 19%;
   height: 100vh;
-  select,input {
-    padding: 8px 55px 8px 10px;
-    margin: 10px 20px;
-  }
-  input[type="color"]{
-    padding: 0;
-    outline: none;
-    border: none;
-  }
-  .submit-btn{
-    background:var(--third-color) ;
-    color: #000000 ;
-    padding: 10px 30px;
-  }
+  
 }
 .Rightbar {
   width: 81%;

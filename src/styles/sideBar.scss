@@ -1,0 +1,68 @@
+.img-nav{
+  height: 30px;
+}
+.side-top{
+  display: flex;
+  justify-content: space-between;
+  height: 90px;
+  padding: 10px 15px;
+  align-items: center;
+}
+.SideBar hr{
+  margin: 0px 15px;
+  border: 1px solid rgba(212, 212, 212, 0.331);
+  height: 0px;
+}
+.generalForm{
+  padding: 10px 15px;
+  font-size: 14px;
+}
+.generalForm form>div{
+ display: flex;
+ align-items: center;
+ flex-wrap: wrap;
+ width: 100%;
+ justify-content: space-between;
+}
+
+.generalForm form>div>div{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 60%;
+}
+.inpUnits{
+    width: 60px;
+}
+.colordiv{
+  padding: 8px 10px;
+}
+
+
+.generalForm form>div input{
+    min-width: 25%;
+}
+
+
+.SideBar{
+    select,input {
+        padding: 8px 10px;
+        margin: 10px 5px;
+      }
+      input[type="color"]{
+        padding: 0;
+        outline: none;
+        border: none;
+      }
+      .submit-btn{
+        background:var(--third-color) ;
+        color: #000000 ;
+        padding: 10px 30px;
+      }
+      h3{
+        margin: 20px 0px;
+        font-size: 18px;
+        font-weight: 500;
+        color: rgb(144, 144, 144);
+      }
+}

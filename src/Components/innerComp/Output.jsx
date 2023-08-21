@@ -2,8 +2,9 @@ import React, { useContext,useEffect } from 'react';
 import GlobalContext from '../../context/global-context';
 import buildHTML from '../build';
 const Output = () => {
+    
     const{property,codeObj,element,setcodeObj,outObj,setoutObj}= useContext(GlobalContext);
-    const {height,width,color,background} = property;
+    // const {height,width,color,background} = property;
     useEffect(()=>{
         buildHTML(element,setcodeObj,codeObj,outObj,setoutObj,property);
        
@@ -15,13 +16,14 @@ const Output = () => {
         <>
         <style>
             {
-            
                codeObj.CSS
             }
         </style>
        
             <div className="output">
-                {codeObj.html}     
+                {
+                codeObj.html
+                }     
                 
             </div>  
             <script defer >

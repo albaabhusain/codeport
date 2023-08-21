@@ -12,7 +12,10 @@ const TopBar = () => {
         <select value={element} onChange={(e) => setElement(e.target.value)}>
           <option value="-1">Select Element</option>
           <option value="nav">Navbar</option>
-          <option value="other">Other</option>
+          <option value="hero">Hero</option>
+          <option value="card">Card</option>
+          <option value="container">Container</option>
+          <option value="footer">Footer</option>
         </select>
       );
     } else if (type === "effect") {
@@ -27,7 +30,7 @@ const TopBar = () => {
   return (
     <div className="TopBar">
       <div>
-       <h3>Tool Bar</h3> 
+        <h3>CodePort</h3>
       </div>
       <div>
         <div className="select">
@@ -36,7 +39,6 @@ const TopBar = () => {
             <option value="-1">Select Type</option>
             <option value="element" >Element</option>
             <option value="effect">Effect</option>
-            
           </select>
         </div>
         <div className="select">
@@ -44,7 +46,7 @@ const TopBar = () => {
         </div>
       </div>
       <div>
-        <input type="text"  placeholder='#000000'/>
+        <input type="text" placeholder='#000000' />
       </div>
     </div>
   );

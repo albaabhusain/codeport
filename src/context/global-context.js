@@ -4,10 +4,13 @@ const GlobalContext = createContext();
 export function GlobalProvider({children}){
     const [element, setElement] = useState();
     const [property, setProperty] = useState({
-        height:'-1',
-        width:'-1',
-        color:'#fff',
-        background:'#000000'
+        height:'',
+        width:'',
+        color:'#ffffff',
+        background:'#000000',
+        unitw:'px',
+        unith:'px',
+        unitf:'em'
 
     });
     const [spProperty,setspProperty]=useState({
