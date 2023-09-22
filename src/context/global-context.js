@@ -11,11 +11,11 @@ export function GlobalProvider({children}){
         unitw:'px',
         unith:'px',
         unitf:'em'
-
     });
     const [spProperty,setspProperty]=useState({
         alignment:'center',
-        logo:'text'
+        logo:'text',
+        type:'-1'
     });
 
     const [codeObj,setcodeObj]=useState({

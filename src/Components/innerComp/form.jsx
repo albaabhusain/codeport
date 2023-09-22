@@ -6,6 +6,7 @@ const Form = () => {
 
     const { element, property, setProperty, setspProperty, spProperty } = useContext(GlobalContext)
     const { height, width, color, background, unith, unitw } = property;
+    const{type}=spProperty;
     const { alignment } = spProperty;
     const handleInput = (e) => {
         let name = e.target.name;
@@ -30,10 +31,25 @@ const Form = () => {
                 <>
                     <div>
                         <label htmlFor="alignment">Alignment :</label>
-                        <select type="color" name="alignment" value={alignment} onChange={handlespInput} >
+                        <select type="select" name="alignment" value={alignment} onChange={handlespInput} >
                             <option value="space-around">Around</option>
                             <option value="space-between">Between</option>
                             <option value="center">Center</option>
+                        </select>
+                    </div>
+                </>
+            )
+        }
+        else if(element === 'card'){
+            return (
+                <>
+                    <div>
+                        <label htmlFor="type">Type :</label>
+                        <select type="select" name="type" value={type} onChange={handlespInput} >
+                            <option value="imgtxt" >Image & Text</option>
+                            <option value="imgbtn">Image & Button</option>
+                            <option value="icotxt">Icon & Text</option>
+                            <option value="icobtn">Icon & Button</option>
                         </select>
                     </div>
                 </>

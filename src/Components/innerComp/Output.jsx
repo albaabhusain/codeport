@@ -3,12 +3,12 @@ import GlobalContext from '../../context/global-context';
 import buildHTML from '../build';
 const Output = () => {
     
-    const{property,codeObj,element,setcodeObj,outObj,setoutObj}= useContext(GlobalContext);
+    const{property,codeObj,element,setcodeObj,outObj,setoutObj,spProperty}= useContext(GlobalContext);
     // const {height,width,color,background} = property;
     useEffect(()=>{
-        buildHTML(element,setcodeObj,codeObj,outObj,setoutObj,property);
+        buildHTML(element,setcodeObj,codeObj,outObj,setoutObj,property,spProperty);
        
-    },[property,element]);
+    },[property,element,spProperty]);
   
     console.log(codeObj) 
     

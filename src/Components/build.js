@@ -1,6 +1,6 @@
 //import GlobalContext from '../../context/global-context';
 //import { useContext} from 'react';
-function buildHTML(element, setcodeObj, codeObj, outObj, setoutObj, property) {
+function buildHTML(element, setcodeObj, codeObj, outObj, setoutObj, property,spProperty) {
     // const {element,setcodeObj,codeObj} = useContext(GlobalContext)
     // const {html,code}=codeObj 
     let htm = '';
@@ -10,6 +10,7 @@ function buildHTML(element, setcodeObj, codeObj, outObj, setoutObj, property) {
     let cjs = '';
     let JS = '';
     const { height, width, color, background } = property;
+    const{type}=spProperty;
     //for nav bar
     if (element === "nav") {
 
@@ -372,8 +373,176 @@ htm = (
 
 
     }
+    else if (element==='card'){
+        //html
+        if(type==='imgtxt'){
+            htm=( <div class="cp-card">
+            <div class="cp-card-img">
+              <img src="https://placehold.co/250x250?text=Hello+World" alt="" />
+            </div>
+            <div class="cp-card-text">
+              <h1>Heading Here</h1>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident
+                ea doloribus facilis sit amet.
+              </p>
+            </div>
+          </div>);
+            chtm=(` <div class="cp-card">
+            <div class="cp-card-img">
+              <img src="https://placehold.co/250x250?text=Hello+World" alt="" />
+            </div>
+            <div class="cp-card-text">
+              <h1>Heading Here</h1>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident
+                ea doloribus facilis sit amet.
+              </p>
+            </div>
+          </div>`);
+        }
+        else if(type==='imgbtn'){
+            htm=(<div class="cp-card">
+            <div class="cp-card-img">
+              <img src="https://placehold.co/250x250?text=Hello+World" alt="" />
+            </div>
+            <div class="cp-card-text">
+              <h1>Text Here</h1>
+              <button class="cp-btn-card">Click Here</button>
+            </div>
+          </div>);
+        chtm=(`<div class="cp-card">
+        <div class="cp-card-img">
+          <img src="https://placehold.co/250x250?text=Hello+World" alt="" />
+        </div>
+        <div class="cp-card-text">
+          <h1>Text Here</h1>
+          <button class="cp-btn-card">Click Here</button>
+        </div>
+      </div>`);
+        }
+        else if( type==='icotxt'){
+            htm=(<div class="cp-card">
+            <div class="cp-card-smimg">
+              <img src="https://placehold.co/250x250?text=Hello+World" alt="" />
+            </div>
+            <div class="cp-card-text">
+              <h1>Text Here</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quisquam at velit deserunt labore corporis possimus necessitatibus! Provident alias sit saepe voluptate, libero atque suscipit in quis doloribus? Non, incidunt.</p>
+            </div>
+          </div>);
+        chtm=(`<div class="cp-card">
+        <div class="cp-card-smimg">
+          <img src="https://placehold.co/250x250?text=Hello+World" alt="" />
+        </div>
+        <div class="cp-card-text">
+          <h1>Text Here</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quisquam at velit deserunt labore corporis possimus necessitatibus! Provident alias sit saepe voluptate, libero atque suscipit in quis doloribus? Non, incidunt.</p>
+        </div>
+      </div>`);
+        }
+        else if(type==='icobtn'){
+            htm=(
+            <div class="cp-card">
+            <div class="cp-card-smimg">
+              <img src="https://placehold.co/250x250?text=Hello+World" alt="" />
+            </div>
+            <div class="cp-card-text">
+              <h1>Text Here</h1>
+              <button class="cp-btn-card">Click Here</button>
+            </div>
+          </div>);
+        chtm=(`
+        <div class="cp-card">
+        <div class="cp-card-smimg">
+          <img src="https://placehold.co/250x250?text=Hello+World" alt="" />
+        </div>
+        <div class="cp-card-text">
+          <h1>Text Here</h1>
+          <button class="cp-btn-card">Click Here</button>
+        </div>
+      </div>
+      `);
+        }
+        
+        //css
+        cCss =`
+        
+        .cp-card {
+            padding: 15px 10px;
+            height: auto;
+            width: 280px;
+            background: black;
+            border-radius: 20px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+          }
+          .cp-card-img > img {
+            border-radius: 20px;
+            width: 250px;
+          }
+          .cp-card-smimg > img {
+              border-radius: 50%;
+              height: 50px;
+              width: 50px;
+          }
+          .cp-card-text {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            line-height: 1.4em;
+          }
+          .cp-card-text > h1 {
+            font-size: 22px;
+            font-weight: 600;
+            padding: 10px;
+          }
+          .cp-btn-card{
+              background: white;
+              border-radius: 10px;
+              width: 190px;
+              height: 50px;
+              color: black;
+              margin-top: 10px;
+          }`;
+        Css=(cCss);
+        //js
+        cjs=``;
+        JS=(cjs);
+    }
+    else if (element==='container'){
+        //html
+        //htm=();
+        chtm=(``);
+        //css
+        cCss =``;
+        Css=(cCss);
+        //js
+        cjs=``;
+        JS=(cjs);
+    }
+    else if (element==='footer'){
+        //html
+      //  htm=();
+        chtm=(``);
+        //css
+        cCss =``;
+        Css=(cCss);
+        //js
+        cjs=``;
+        JS=(cjs);
+    }
     else {
         //setcodeObj({...property.width}) 
+        //html
+        // htm=();
+        // chtm=(``);
+        //css
+        // cCss =``;
+        // Css=(cCss);
+        //js
+        // cjs=``;
+        // JS=(cjs);
     }
     setcodeObj({ ...codeObj, html:htm , CSS: Css, JS: cjs });
     setoutObj({ ...outObj, html: chtm, CSS: cCss, JS: JS });
