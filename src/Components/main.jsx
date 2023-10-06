@@ -4,7 +4,6 @@ import SideBar from './sideBar';
 import { GlobalProvider } from '../context/global-context';
 import Display from './display';
 import CodePut from './codePut';
-
 const Main = () => {
     return (
         <div className='Main'>

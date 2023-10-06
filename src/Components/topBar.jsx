@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import GlobalContext from "../context/global-context";
 import "../styles/topBar.scss";
+import {Link} from 'react-router-dom'
 
 const TopBar = () => {
   const { element, setElement } = useContext(GlobalContext);
@@ -20,7 +21,7 @@ const TopBar = () => {
       );
     } else if (type === "effect") {
       return (
-        <select onChange={(e) => e.target.value}>
+        <select onChange={(e) => e.target.value} disabled>
           <option value="-1">Select Effect</option>
           <option value="test">test</option>
         </select>
@@ -30,7 +31,7 @@ const TopBar = () => {
   return (
     <div className="TopBar">
       <div>
-        <h3>CodePort</h3>
+        <h3><Link to='/Landing'>CodePort</Link></h3>
       </div>
       <div>
         <div className="select">

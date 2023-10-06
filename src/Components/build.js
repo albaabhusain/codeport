@@ -9,7 +9,7 @@ function buildHTML(element, setcodeObj, codeObj, outObj, setoutObj, property,spP
     let Css = '';
     let cjs = '';
     let JS = '';
-    const { height, width, color, background } = property;
+    const { height, width, color, background,unitw,unith } = property;
     const{type}=spProperty;
     //for nav bar
     if (element === "nav") {
@@ -78,8 +78,8 @@ cCss = `
         justify-content: center;
         align-items: center;
         gap: 120px;
-        width: `+ width + `px;
-        height: `+ height + `px;
+        width: `+ width + ``+unitw+`;
+        height: `+ height +` `+unith+`;
         color:`+ color + ` ;
     }
     .burgerNav{
@@ -308,8 +308,8 @@ htm = (
             display: flex;
             text-align: center;
             justify-content: center;
-            width: 100%;
-            height: 70vh;
+            width: `+width+``+unitw+`;
+            height: `+height+``+unith+`;
             padding: 30px 10px;
             background: `+background+`;
             color:`+color+`
@@ -404,7 +404,7 @@ htm = (
         else if(type==='imgbtn'){
             htm=(<div class="cp-card">
             <div class="cp-card-img">
-              <img src="https://placehold.co/250x250?text=Hello+World" alt="" />
+              <img src="https://placehold.co/250x250?text=Image+Here" alt="" />
             </div>
             <div class="cp-card-text">
               <h1>Text Here</h1>
@@ -413,7 +413,7 @@ htm = (
           </div>);
         chtm=(`<div class="cp-card">
         <div class="cp-card-img">
-          <img src="https://placehold.co/250x250?text=Hello+World" alt="" />
+          <img src="https://placehold.co/250x250?text=Image+Here" alt="" />
         </div>
         <div class="cp-card-text">
           <h1>Text Here</h1>
@@ -424,7 +424,7 @@ htm = (
         else if( type==='icotxt'){
             htm=(<div class="cp-card">
             <div class="cp-card-smimg">
-              <img src="https://placehold.co/250x250?text=Hello+World" alt="" />
+              <img src="https://placehold.co/250x250?text=Image+Here" alt="" />
             </div>
             <div class="cp-card-text">
               <h1>Text Here</h1>
@@ -433,7 +433,7 @@ htm = (
           </div>);
         chtm=(`<div class="cp-card">
         <div class="cp-card-smimg">
-          <img src="https://placehold.co/250x250?text=Hello+World" alt="" />
+          <img src="https://placehold.co/250x250?text=Image+Here" alt="" />
         </div>
         <div class="cp-card-text">
           <h1>Text Here</h1>
@@ -445,7 +445,7 @@ htm = (
             htm=(
             <div class="cp-card">
             <div class="cp-card-smimg">
-              <img src="https://placehold.co/250x250?text=Hello+World" alt="" />
+              <img src="https://placehold.co/250x250?text=Image+Here" alt="" />
             </div>
             <div class="cp-card-text">
               <h1>Text Here</h1>
@@ -455,7 +455,7 @@ htm = (
         chtm=(`
         <div class="cp-card">
         <div class="cp-card-smimg">
-          <img src="https://placehold.co/250x250?text=Hello+World" alt="" />
+          <img src="https://placehold.co/250x250?text=Image+Here" alt="" />
         </div>
         <div class="cp-card-text">
           <h1>Text Here</h1>
@@ -471,12 +471,13 @@ htm = (
         .cp-card {
             padding: 15px 10px;
             height: auto;
-            width: 280px;
-            background: black;
+            width: `+width+``+unitw+`;
+            background: `+background+`;
             border-radius: 20px;
-            color: white;
+            color: `+color+`;
             font-family: Arial, Helvetica, sans-serif;
             text-align: center;
+            margin:10px;
           }
           .cp-card-img > img {
             border-radius: 20px;
