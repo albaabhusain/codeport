@@ -1,22 +1,22 @@
 import Landingpage from "./Components/innerComp/Landingpage";
 import Main from "./Components/main";
 
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import { BrowserRouter as Router, Route, Routes, BrowserRouter } from "react-router-dom"
 function App() {
   return (
     <>
     <div className="App">
-      <Router>
+      <BrowserRouter>
         <Routes>
-          <Route path='/'>
-            <Main/>
-          </Route>
-          <Route path='/Landing'>
-            <Landingpage/>
-          </Route>
+          <Route path='/' element={<Main/>}/>
+            
+          
+          <Route path='/Landing' element={<Landingpage/>}/>
+            
+         
           
         </Routes>
-      </Router>
+      </BrowserRouter>
         
       
     </div>

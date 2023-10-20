@@ -1,16 +1,26 @@
 import React from 'react';
 import '../../styles/Landing.scss'
 import Backimg from '../../assets/logo/Codeportimg.png'
+import instai from '../../assets/instaicon.svg'
+import facei from '../../assets/faceicon.svg'
+import twitteri from '../../assets/twittericon.svg'
+import curve from '../../assets/Cruve.svg'
+import lastbg from '../../assets/lastbg.svg'
+import vecty from '../../assets/Vector 6.png'
+import vectg from '../../assets/Vector 8.svg'
+import storybg from '../../assets/story-img.svg'
+
 import {Link} from 'react-router-dom'
 const Landingpage = () => {
     return (
         <>
            
-<div>
+<div id='landingwrap'>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
     
     <nav className="navbar navbar-expand-lg navbar-dark " id="nav-bar">
         <div className="container-fluid ">
-            <a className="navbar-brand" href="#">CodePort <sup>beta</sup></a>
+            <a className="navbar-brand" href="/Landing">CodePort <sup>beta</sup></a>
             <button className="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -19,7 +29,7 @@ const Landingpage = () => {
             <div className="navbar-collapse collapse" id="navbarTogglerDemo02" >
                 <ul className="navbar-nav  ms-auto mb-2 mb-lg-0 align-items-lg-center align-items-xl-center">
                     <li className="nav-item px-2">
-                        <a className="nav-link active" aria-current="page" href="#">Home</a>
+                        <a className="nav-link active" aria-current="page" href="/Landing">Home</a>
                     </li>
                     <li className="nav-item px-2">
                         <a className="nav-link" href="#">Documentation</a>
@@ -41,13 +51,13 @@ const Landingpage = () => {
 
     <div className="container-fluid col-xxl-12 hero-sect">
         <div className=" row flex-lg-row-reverse align-items-center justify-content-end pt-4 mx-3">
-            <div className="col-10 col-sm-8 col-lg-6 p-0 m-0">
+            <div className="col-10 col-sm-8 col-lg-6 p-0 m-0 d-lg-block d-none">
                 <div className="hero-img-wrap">
                     <img src={Backimg} alt=""/>
                 </div>
                 
             </div>
-            <div className="col-lg-6 px-5 my-5">
+            <div className="col-lg-6 col-12 px-lg-5 px-1 my-5">
                 <div className="lc-block mb-3">
                     <div editable="rich">
                         <h2 className="fw-bold display-5">A tool curated for <br/> Developers</h2>
@@ -77,14 +87,14 @@ const Landingpage = () => {
 
     <div className="container-fluid benefits-sect py-3 my-3 mb-5 pb-5 pt-5 mt-5 ">
         <div className="container col-12 pb-3 mb-4">
-            <div className="text-center col-lg-6 col-10 m-auto">
+            <div className="text-center col-lg-6 col-12 m-auto">
                 <h1 className="p-4 pb-3">Benefits of using CodePort</h1>
-                <p>Although it gives the developers to build a landing pages and even whole static pages in few minutes , it has a lot to offer !</p>
+                <p>Although it gives the developers to build a landing pages <br /> and even whole static pages in few minutes , it has a lot to offer !</p>
             </div>
         </div>
 
         <div className="container-fluid my-2 p-2">
-            <div className=" d-flex">
+            <div className=" d-flex flex-column flex-lg-row">
                 <div className="b-card container text-center d-flex flex-column justify-content-start align-items-center">
                     <div className="b-color3 b-color"></div>
                     <div className="b-head ">Increase Productivity</div>
@@ -96,7 +106,7 @@ const Landingpage = () => {
                     <div className="b-color"></div>
                     <div className="b-head">Clean Code</div>
                     <p>
-                        well structued code let you understand and edit it in no time.
+                        Well structued code let you understand and edit it in no time.
                     </p>
                 </div>
                 <div className="b-card container text-center d-flex flex-column justify-content-start align-items-center">
@@ -125,15 +135,15 @@ const Landingpage = () => {
 
     <div className="about-cont container-fluid pt-4 mb-5 pb-5">
         <div className="container abt-sect px-4  d-flex align-items-center">
-            <img className="abt-vec-img" src="./assets/Vector 6.png" alt=""/>
+            <img className="abt-vec-img " src={vecty} alt=""/>
 
             <div>
-                <img className="abt-img" src="./assets/Group 1000003772.svg" alt=""/>
+                <img className="abt-img d-none d-md-block" src={storybg} alt=""/>
             </div>
-            <div className="contaner-abt">
+            <div className="contaner-abt d-none d-md-block">
 
             </div>
-            <div className="container p-4 m-2 abt-content d-flex flex-column justify-content-end  w-75 pe-0 me-0">
+            <div className="container p-4 m-2 abt-content d-flex flex-column justify-content-end  w-100 pe-0 me-0">
                 <h1 className="py-2 mb-3">Our Story</h1>
                 <p className="text-muted">Lorem ipsum dolor sit amet consectetur. Urna fermentum pulvinar in ph <br/> vitae enim. Amet duis accumsan at facilisi nec. Non proin vulputate eu <br/> odio d Non proin vulputate eu </p>
                 <button className="btn-hero-get my-3 align-self-start mt-4">Know More</button>
@@ -153,8 +163,8 @@ const Landingpage = () => {
                 </div>
             </div>
 
-            <img src="./assets/Vector 9.svg" className="cour-vec-arrow" alt=""/>
-            <img className="cour-vec-img" src="./assets/Vector 8.svg" alt=""/>
+            <img src={curve} className="cour-vec-arrow d-none d-md-block" alt=""/>
+            <img className="cour-vec-img d-none d-md-block" src={vectg} alt=""/>
             
           
             <div className=" card-cont  d-flex justify-content-between flex-wrap align-content-around">
@@ -231,7 +241,7 @@ const Landingpage = () => {
                     </div>
                 </div>
                 <div className="add-center">
-                    <img className="add-img" src="./assets/Group 1000003949.svg" alt=""/>
+                    <img className="add-img d-none d-md-block" src={lastbg} alt=""/>
                 </div>
                 <div className="add-right">
                     <div>
@@ -261,14 +271,14 @@ const Landingpage = () => {
                             If you are interested to contribute to this project or have feedback feel free to contact us.
                         </div>
                         <div className="d-flex mt-2 pt-1">
-                            <div className="py-2 me-2"> <img  className="foot-icon" src="./assets/Group 1000003650.svg" alt=""/> </div>
-                            <div className="p-2"><img  className="foot-icon" src="./assets/Group 1410104390.svg" alt=""/></div>
-                            <div className="p-2"><img  className="foot-icon" src="./assets/Group 1000003654.svg" alt=""/></div>
+                            <div className="py-2 me-2"> <img  className="foot-icon" src={instai} alt=""/> </div>
+                            <div className="p-2"><img  className="foot-icon" src={twitteri} alt=""/></div>
+                            <div className="p-2"><img  className="foot-icon" src={facei} alt=""/></div>
                         </div>
 
                     </div>
 
-                    <div className="px-3 mx-3">
+                    <div className="px-3 mx-3 d-none d-md-block">
                         <div className="fs-5 py-4 pb-3 fw-600">
                             Pages
                         </div>
@@ -282,7 +292,7 @@ const Landingpage = () => {
 
                     </div>
 
-                    <div className="px-4 mx-4">
+                    <div className="px-4 mx-4 d-none d-md-block">
                         <div className="fs-5 py-4 pb-3 fw-600">
                             Services
                         </div>
@@ -296,7 +306,7 @@ const Landingpage = () => {
 
                     </div>
 
-                    <div className="px-4 mx-5">
+                    <div className="px-4 mx-5 "id="cont-foot">
                         <div className="fs-5 py-4 pb-3 fw-600">
                             Contact us at
                         </div>

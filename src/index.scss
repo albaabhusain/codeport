@@ -8,7 +8,7 @@
   font-family: 'Poppins', sans-serif;
 }
 .dark-theme{
-    --primary:#000000;
+    --cpprimary:#000000;
     --inputs: rgba(217, 217, 217, 0.12);
     --inp-color: rgba(255, 255, 255, 0.4);
     --third-color:#FFC34A;
@@ -26,13 +26,13 @@ input:focus,select:focus{
 }
 .Main {
   display: flex;
-  background: var(--primary);
+  background: var(--cpprimary);
   color: white;
   overflow: hidden;
 }
 
 .SideBar {
-  background: var(--primary);
+  background: var(--cpprimary);
   border-right: 1px solid rgba(255, 255, 255, 0.28);;
   width: 19%;
   height: 100vh;
